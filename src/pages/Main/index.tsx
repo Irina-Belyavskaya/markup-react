@@ -5,8 +5,21 @@ import Footer from "../../components/Footer"
 import Aside from "../../components/Aside"
 import Cards from "../../components/Cards"
 import Squares from "../../components/Square"
+import { useEffect, useState } from "react"
 
 const MainPage = () => {
+  const [navHeight,setNavHeight] = useState("100vh")
+
+  const navStyle = { 
+      minHeight: navHeight
+  }
+
+  useEffect( () => { 
+      if(window.innerWidth <= 1535) {
+        setNavHeight("fit-content")
+      }
+  },[])
+
   return (
     <Grid 
       container 
@@ -20,7 +33,7 @@ const MainPage = () => {
         item 
         container 
         xl={0.5} 
-        sx={{ minHeight: '100vh' }}
+        style={navStyle}
       >
         <Nav/>
       </Grid >

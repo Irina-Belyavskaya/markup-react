@@ -3,8 +3,20 @@ import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { useEffect, useState } from 'react'
 
 const Aside = () => {
+  const [asideMargin,setAsideMargin] = useState('0 0 0 10px')
+
+  const asideStyle = { 
+    margin: asideMargin 
+  }
+
+  useEffect( () => { 
+      if(window.innerWidth <= 1535){
+        setAsideMargin('10px 0 0 0')
+      }
+  },[])
 
   const StyledAccordion = styled(Accordion)`
     height: fit-content; 
@@ -17,13 +29,13 @@ const Aside = () => {
     <Grid 
       container 
       item 
+      style={asideStyle}
       sx={{ 
         bgcolor: '#ef5b5b',
-        width: '100%', 
-        marginLeft: '10px'
+        width: '100%'
       }}
     >
-      <Grid>
+      <Grid sx={{width: '100%'}}>
         <Typography sx={{ textAlign: 'center', margin: '10px 0'}}>
           ASIDE
         </Typography>
