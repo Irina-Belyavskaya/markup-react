@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Chip, Grid, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Chip, Grid, Typography } from '@mui/material'
 
 const CharacterCard = ({name, image, species, status, location, gender}:any) => {
 
@@ -34,7 +34,10 @@ const CharacterCard = ({name, image, species, status, location, gender}:any) => 
             }}  
           >
             <Grid item >
-              <Typography variant="h5" sx={{ marginTop: '10px' }}>
+              <Typography 
+                variant="h5" 
+                sx={{ marginTop: '10px' }}
+              >
                 {name}
               </Typography>
               {
@@ -66,7 +69,8 @@ const CharacterCard = ({name, image, species, status, location, gender}:any) => 
               }
               
             </Grid>
-            <Grid item
+            <Grid 
+              item
               sx={{
                 width: '100%',
                 alignSelf: 'flex-end'

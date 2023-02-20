@@ -1,8 +1,8 @@
-import { Grid } from "@mui/material"
+import { Grid } from '@mui/material'
 import { useState, useEffect } from 'react'
 import { getCharacter } from '../../api/characters'
-import CharacterCard from "./CharacterCard"
-import Search from "./Search"
+import CharacterCard from './CharacterCard'
+import Search from './Search'
 
 export interface ICharacter {
   name: string,
@@ -24,8 +24,6 @@ const Cards = () => {
       setCharacters(data.results)
     })
   },[])
-
-  console.log(characters)
 
   return (
     <Grid 
@@ -61,4 +59,4 @@ const Cards = () => {
   )
 }
 
-export default Cards;
+export default Cards

@@ -1,10 +1,16 @@
-import { Drawer, Grid, ListItemButton, ListItemText, IconButton, List } from "@mui/material"
-import MenuIcon from "@mui/icons-material/Menu"
-import { useState } from "react"
-import CloseIcon from "@mui/icons-material/Close"
+import { Drawer, Grid, ListItemButton, ListItemText, IconButton, List, styled } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
+import { useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close'
+import { Link } from 'react-router-dom'
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+`
 
 const Nav = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <Grid 
@@ -52,28 +58,29 @@ const Nav = () => {
             }}
           >
             <ListItemButton>
-              <ListItemText primary="Home"/>
+              <StyledLink to='/'>
+                <ListItemText primary="Home"/>
+              </StyledLink>                
             </ListItemButton>
 
             <ListItemButton>
-              <ListItemText primary="Products" />
+              <StyledLink to='/register'>
+                <ListItemText primary="Sign Up"/>
+              </StyledLink> 
             </ListItemButton>
 
             <ListItemButton>
-              <ListItemText primary="Articles" />
+              <StyledLink to='/login'>
+                <ListItemText primary="Sign In"/>
+              </StyledLink> 
             </ListItemButton>
 
             <ListItemButton>
-              <ListItemText primary="News" />
+              <StyledLink to='/' state={'HEADER'}>
+                <ListItemText primary="Log out"/>
+              </StyledLink> 
             </ListItemButton>
 
-            <ListItemButton>
-              <ListItemText primary="About" />
-            </ListItemButton>
-
-            <ListItemButton>
-              <ListItemText primary="Our team" />
-            </ListItemButton>
           </List>
         </Drawer>
       </Grid>
@@ -93,4 +100,4 @@ const Nav = () => {
   )
 }
 
-export default Nav;
+export default Nav

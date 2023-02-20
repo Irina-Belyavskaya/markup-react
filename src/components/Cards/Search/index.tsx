@@ -1,15 +1,7 @@
-import { Autocomplete, Grid, TextField } from "@mui/material"
-import { useMemo, useState } from "react"
-import CharacterCard from "../CharacterCard"
-import { ICharacter } from ".."
-
-
-// interface ICharacter {
-//   name: string,
-//   image: string,
-//   species: string,
-//   status: string
-// }
+import { Autocomplete, Grid, TextField } from '@mui/material'
+import { useMemo, useState } from 'react'
+import CharacterCard from '../CharacterCard'
+import { ICharacter } from '..'
 
 interface AutocompleteOption {
   label: string,
@@ -51,7 +43,13 @@ const Search = ({characters}: any) => {
   }
 
   return (
-    <Grid container sx={{ bgcolor: '#b437Ea', padding: '10px'}}>
+    <Grid 
+      container 
+      sx={{ 
+        bgcolor: '#b437Ea', 
+        padding: '10px'
+      }}
+    >
       <Grid container item>
         <Autocomplete
           disablePortal

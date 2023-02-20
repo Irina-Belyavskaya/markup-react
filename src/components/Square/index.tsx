@@ -1,4 +1,4 @@
-import { Grid, styled } from "@mui/material"
+import { Grid, styled } from '@mui/material'
 
 const AnimatedGrid = styled(Grid)`
   background-color: #1b6c42;

@@ -1,4 +1,4 @@
-import { Grid, styled, Typography } from "@mui/material"
+import { Grid, styled, Typography } from '@mui/material'
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
@@ -62,4 +62,4 @@ const Aside = () => {
   )
 }
 
-export default Aside;
+export default Aside

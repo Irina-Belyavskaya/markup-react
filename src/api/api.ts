@@ -1,10 +1,18 @@
-import axios from "axios";
+import axios from "axios"
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
-export const API_URL = `${BASE_URL}/api/`;
+// Characters
+const BASE_URL = process.env.REACT_APP_BASE_URL
+export const API_URL = `${BASE_URL}/api/`
 
-const $api = axios.create({
+const $apiCharacters = axios.create({
   baseURL: API_URL
-});
+})
 
-export default $api;
+// Users
+export const USERS_URL = process.env.REACT_APP_USERS_URL
+export const $apiUsers = axios.create({
+  baseURL: USERS_URL
+})
+
+
+export default $apiCharacters

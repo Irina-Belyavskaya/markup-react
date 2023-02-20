@@ -1,14 +1,16 @@
-import { Grid, Menu, MenuItem, Typography, } from "@mui/material";
-import Button from "@mui/material/Button";
-import { useState } from "react";
+import { Grid, Menu, MenuItem, Typography, } from '@mui/material'
+import Button from '@mui/material/Button'
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
-
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const open = Boolean(anchorEl)
+  const location = useLocation()
+  
   const handleClose = () => {
     setAnchorEl(null);
-  };
+  }
 
   return (
     <Grid 
@@ -22,10 +24,20 @@ const Header = () => {
         height: 'fit-content',
       }}
     >
-      <Grid item sx={{ width: '100%', textAlign: 'center'}}>
-        <Typography>
-          HEADER
-        </Typography> 
+      <Grid 
+        item 
+        sx={{ 
+          width: '100%', 
+          textAlign: 'center'
+        }}
+      >
+        {
+          location.state
+          ?
+            <Typography>{location.state}</Typography>
+          :
+            <Typography>HEADER</Typography>
+        }
       </Grid>
       <Grid item container>
         <Grid item sx={{marginRight: '10px'}}>
@@ -111,4 +123,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header

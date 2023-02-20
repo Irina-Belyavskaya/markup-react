@@ -1,10 +1,10 @@
-import { Grid } from "@mui/material";
-import Header from "../../components/Header";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
-import Aside from "../../components/Aside";
-import Cards from "../../components/Cards";
-import Squares from "../../components/Square";
+import { Grid } from "@mui/material"
+import Header from "../../components/Header"
+import Nav from "../../components/Nav"
+import Footer from "../../components/Footer"
+import Aside from "../../components/Aside"
+import Cards from "../../components/Cards"
+import Squares from "../../components/Square"
 
 const MainPage = () => {
   return (
