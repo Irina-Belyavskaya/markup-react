@@ -2,7 +2,7 @@ import MainPage from './pages/Main'
 import { Route, Routes } from 'react-router-dom'
 import LoginPage from './pages/Login'
 import RegisterPage from './pages/Register'
-import { useAppDispatch, useAppSelector } from "./hooks/hooks"
+import { useAppDispatch } from "./hooks/hooks"
 import { getUsers } from "./store/slices/userSlice"
 import { useEffect } from 'react'
 
@@ -21,4 +21,4 @@ function App() {
   ) 
 }
 
-export default App;
+export default App
