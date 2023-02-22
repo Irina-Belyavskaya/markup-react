@@ -3,6 +3,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { orange } from '@mui/material/colors'
+import welcome from '../../assets/welcome.jpg'
 
 const theme = createTheme({
   palette: {
@@ -28,8 +29,7 @@ const Form = ({title, nameBtn, handleSubmit, isSignIn} : PropsType) => {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1543599538-a6c4f6cc5c05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80)',
-            backgroundRepeat: 'no-repeat',
+            backgroundImage:  `url(${welcome})`,
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',

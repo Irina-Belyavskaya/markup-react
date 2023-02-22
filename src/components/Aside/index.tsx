@@ -4,6 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { useEffect, useState } from 'react'
+import minions from '../../assets/minions.jpg'
 
 const Aside = () => {
   const [asideMargin,setAsideMargin] = useState('0 0 0 10px')
@@ -69,6 +70,9 @@ const Aside = () => {
             </Typography>
           </AccordionDetails>
         </StyledAccordion>
+        <Grid container sx={{marginTop: '10px'}}>
+          <img src={minions} alt={'minions'} style={{width:'100%'}}/>
+        </Grid>
       </Grid>
     </Grid>
   )
