@@ -7,6 +7,7 @@ const AnimatedGrid = styled(Grid)`
   position: relative;
   animation: slidein 5s linear infinite alternate 0s;
   left: 0;
+  align-self: center;
 
   @keyframes slidein {
     0% {
