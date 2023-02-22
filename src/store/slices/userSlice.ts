@@ -45,7 +45,7 @@ export const addUser = createAsyncThunk<User, User, { rejectValue: string }>(
       try {
         return await addUserAxios(user)
       }catch (error: any) {
-        const msg = "Can't get users. Server error."
+        const msg = "Invalid email. This email already in use."
         return rejectWithValue(msg)
       }
   }
